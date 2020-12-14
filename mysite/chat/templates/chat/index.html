@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title> rooms </title>
+	</head>
+
+	<body>
+
+		{% if chat_rooms %}
+			<ul>
+				{% for room in chat_rooms %}
+				<li> <a href="/chat/{{ room.id }}/">{{room.room_name }}
+				</a> </li>
+		{% endfor %}
+
+			</ul>
+		{% else %}
+
+			<h1> no chat found! </h1>
+
+		{% endif %}
+
+	</body>
+
+</html>
